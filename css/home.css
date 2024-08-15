@@ -100,3 +100,9 @@
     color: #FFF;
     text-transform: uppercase;
 }
+
+@media (max-height: 500px) {
+    #home-page header a {
+        display: none;
+    }
+}
