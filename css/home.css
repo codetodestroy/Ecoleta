@@ -82,10 +82,12 @@
 }
 
 #home-page main button .search {
-    background-color: var(--dark-primary-color);
     background: url("../assets/search.svg") no-repeat center;
+    background-color: var(--dark-primary-color);
     
     border-radius: 5px 0 0 5px;
+
+    display: block;
     
     width: 72px;
     height: 100%;
