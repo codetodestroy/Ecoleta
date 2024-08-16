@@ -1,7 +1,5 @@
 #home-page {
     height: 100vh;
-
-    position: relative;
 }
 
 #home-page .content {
@@ -18,6 +16,7 @@
     display: flex;
     flex-direction: column;
     align-items: center;
+    gap: 40px;
 }
 
 #home-page header a {
@@ -26,16 +25,14 @@
     color: var(--title-color);
 
     display: flex;
-    gap: 20px;
-
-    position: absolute;
-    bottom: 140px;
+    gap: 10px;
 }
 
 #home-page header a::before {
     content: "";
-    display: block;
+
     background: url("../assets/log-in.svg") no-repeat;
+
     width: 20px;
     height: 20px;
 }
@@ -45,7 +42,7 @@
     
     display: flex;
     flex-direction: column;
-    gap: 50px;
+    gap: 60px;
 
     text-align: center;
 }
@@ -60,13 +57,13 @@
 
 #home-page main button {
     max-width: 350px;
-    width: 80%;
+    width: 100%;
     height: 70px;
 
     border: 0;
     border-radius: 5px;
 
-    margin: 0 auto;
+    margin: 0 auto 10px;
 
     background-color: var(--primary-color);
     
@@ -84,14 +81,13 @@
 }
 
 #home-page main button .search {
+    background-color: var(--dark-primary-color);
     background: url("../assets/search.svg") no-repeat center;
+    
+    border-radius: 5px 0 0 5px;
     
     width: 72px;
     height: 100%;
-
-    border-radius: 5px 0 0 5px;
-    
-    background-color: var(--dark-primary-color);
 }
 
 #home-page main button strong {
@@ -99,10 +95,4 @@
 
     color: #FFF;
     text-transform: uppercase;
-}
-
-@media (max-height: 500px) {
-    #home-page header a {
-        display: none;
-    }
 }
