@@ -1,11 +1,7 @@
-/* #home-page {
-    height: 100vh;
-} */
-
 #home-page .content {
     width: 90%;
     max-width: 1100px;
-    
+
     margin: 0 auto;
 
     position: relative;
@@ -27,7 +23,7 @@
     color: var(--title-color);
 
     display: flex;
-    gap: 10px;
+    gap: 15px;
 
     position: absolute;
     bottom: -100px;
@@ -45,7 +41,7 @@
 /* MAIN  */
 #home-page main {
     margin-top: 30px;
-    
+
     display: flex;
     flex-direction: column;
     gap: 40px;
@@ -72,7 +68,7 @@
     margin: 0px auto;
 
     background-color: var(--primary-color);
-    
+
     display: flex;
     align-items: center;
     justify-content: center;
@@ -89,11 +85,9 @@
 #home-page main button .search {
     background: url("../assets/search.svg") no-repeat center;
     background-color: var(--dark-primary-color);
-    
+
     border-radius: 5px 0 0 5px;
 
-    display: block;
-    
     width: 72px;
     height: 100%;
 }
@@ -103,4 +97,58 @@
 
     color: #FFF;
     text-transform: uppercase;
+}
+
+@media (width >= 768px) {
+    #home-page {
+        height: 100vh;
+        
+        background: url("../assets/home-background.svg") no-repeat 300px 200px;
+    }
+
+    #home-page .content {
+        position: static;
+
+    }
+
+    /* HEADER */
+    #home-page header {
+        padding: 40px 0;
+
+        flex-direction: row;
+        justify-content: space-between;
+    }
+
+    #home-page header a {
+        position: static;
+    }
+
+    /* MAIN  */
+    #home-page main {
+        max-width: 60ch;
+        width: 60%;
+        margin-top: 60px;
+
+        text-align: left;
+    }
+
+    #home-page main h1 {
+        font-size: 3rem;
+        line-height: 1.2;
+    }
+    
+    #home-page main p {
+        font-size: 1.4rem;
+        line-height: 1.2;
+    }
+
+    #home-page main button {
+        margin: 0px;
+    }
+}
+
+@media (width >= 1199px) {
+    #home-page {
+        background-position: 700px bottom;
+    }
 }
