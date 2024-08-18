@@ -101,6 +101,8 @@
     text-align: center;
 
     border-radius: 5px;
+
+    cursor: pointer;
 }
 
 #create-point-page .item h4 {
@@ -127,6 +129,15 @@
 
 #create-point-page #btnCreatePoint:hover {
     background-color: var(--dark-primary-color);
+}
+
+.items .item.selectedItem {
+    border: 2px solid var(--primary-color);
+}
+
+.items .item img,
+.items .item h4 {
+    pointer-events: none;
 }
 
 @media (width >=768px) {
@@ -200,9 +211,3 @@
         margin: 0 auto;
     }
 }
-
-@media (width >=1199px) {}
-
-@media (width >=1500px) {}
-
-@media (height <=780px) {}

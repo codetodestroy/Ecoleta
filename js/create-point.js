@@ -1,3 +1,4 @@
+// Fectch API na API do IBGE para pegar Estados e Cidades
 const sltStates = document.querySelector('#eState');
 
 function showStatesList() {
@@ -14,7 +15,7 @@ showStatesList();
 function showCitiesListBasedOnState(e) {
     const sltCities = document.querySelector('#eCity');
 
-    let nState = e.target.value;
+    const nState = e.target.value;
 
     const urlCities = `https://servicodados.ibge.gov.br/api/v1/localidades/estados/${nState}/municipios`;
 
@@ -34,3 +35,16 @@ function showCitiesListBasedOnState(e) {
 }
 
 sltStates.addEventListener('change', showCitiesListBasedOnState);
+
+// Itens de coleta
+function selectedItem(e) {
+    const item = e.target;
+
+    item.classList.toggle('selectedItem');
+}
+
+const allItems = document.querySelectorAll('.item');
+
+allItems.forEach((item) => {
+    item.addEventListener('click', selectedItem);
+});
