@@ -1,0 +1,72 @@
+/* HEADER */
+#create-point-page header a::before {
+    background: url("../assets/arrow-left.svg") no-repeat;
+}
+
+.content-form {
+    gap: 20px;
+}
+
+.container-form {
+    background-color: #FFF;
+    box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
+
+    padding: 25px 20px;
+
+    border-radius: 5px;
+}
+
+.container-form h1 {
+    font-size: 1.4rem;
+    text-align: center;
+    text-transform: uppercase;
+}
+
+.container-form form {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.container-form legend {
+    font-size: 1.2rem;
+    font-weight: 600;
+    color: var(--title-color);
+    margin-bottom: 5px;
+}
+
+.container-form fieldset, 
+.container-form .field-group {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.container-form .field {
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
+}
+
+.container-form label {
+    font-size: 1rem;
+    font-weight: 400;
+}
+
+.container-form input, 
+.container-form select {
+    height: 40px;
+
+    background-color: var(--bg-color);
+    
+    border-radius: 5px;
+    border: 0;
+    outline: none;
+
+    padding: 5px 10px;
+}
+
+.container-form input:focus,
+.container-form select:focus {
+    border: 2px solid var(--primary-color);
+}

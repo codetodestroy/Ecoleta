@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="author" content="Caio Douglas">
+    <meta name="description" content="Ajudamos pessoas a encontrarem pontos de coleta de forma eficiente.">
+
+    <title>Ecoleta - Cadastro do Ponto de Coleta</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;700&family=Ubuntu:wght@700&display=swap"
+        rel="stylesheet">
+
+    <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body>
+    <div id="create-point-page">
+        <div class="content content-form">
+            <header>
+                <img src="/assets/logo.svg" alt="Ecoleta" width="182" height="44">
+                <a href="/">Voltar para Página Inicial</a>
+            </header>
+
+            <main>
+                <div class="container-form">
+                    <form action="#">
+                        <h1>Cadastro do Ponto de Coleta</h1>
+                        <fieldset>
+                            <legend>Dados da entidade</legend>
+                            <div class="field-group">
+                                <div class="field">
+                                    <label for="eName">Nome da entidade</label>
+                                    <input type="text" id="eName" name="eName">
+                                </div>
+                                <div class="field">
+                                    <label for="eImage">Imagem da entidade</label>
+                                    <input type="text" id="eImage" name="eImage" placeholder="http://">
+                                </div>
+                            </div>
+                            <div class="field-group">
+                                <div class="field">
+                                    <label for="eAddress">Endereço</label>
+                                    <input type="text" id="eAddress" name="eAddress">
+                                </div>
+                                <div class="field">
+                                    <label for="eAddressComplement">Número/Complemento</label>
+                                    <input type="text" id="eAddressComplement" name="eAddressComplement">
+                                </div>
+                            </div>
+                            <div class="field-group">
+                                <div class="field">
+                                    <label for="eState">Estado</label>
+                                    <select name="eState" id="eState">
+                                        <option value="">Selecione o Estado...</option>
+                                    </select>
+                                </div>
+                                <div class="field">
+                                    <label for="eCity">Cidade</label>
+                                    <select name="eCity" id="eCity">
+                                        <option value="">Selecione a Cidade...</option>
+                                    </select>
+                                </div>
+                            </div>
+                        </fieldset>
+
+                        <fieldset>
+                            <legend>Itens de coleta</legend>
+                            
+                        </fieldset>
+                    </form>
+
+                </div>
+
+            </main>
+
+        </div>
+    </div>
+</body>
+
+</html>
