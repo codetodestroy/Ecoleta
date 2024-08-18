@@ -11,6 +11,7 @@ html {
 
 body {
     background-color: var(--bg-color);
+    padding: 0 0 20px;
 }
 
 a {

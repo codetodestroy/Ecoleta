@@ -42,7 +42,7 @@
 .container-form form fieldset + fieldset legend::after {
     content: 'Selecione um ou mais itens abaixo';
 
-    font-size: .8rem;
+    font-size: .6rem;
     font-weight: 400;
     color: #000;
 }
@@ -61,7 +61,7 @@
 }
 
 .container-form label {
-    font-size: .8rem;
+    font-size: .6rem;
     text-transform: uppercase;
     font-weight: 400;
 }
@@ -99,10 +99,13 @@
 
     padding: 20px;
     text-align: center;
+    
+    border-radius: 5px;
 }
 
 .item h4 {
     margin-top: 15px;
+    font-size: .8rem;
 }
 
 #btnCreatePoint {
