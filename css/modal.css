@@ -1,0 +1,84 @@
+#modal {
+    background-color: #0E0A14EF;
+
+    width: 100vw;
+    height: 100vh;
+
+    position: fixed;
+    top: 0;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    transition: 400ms;
+}
+
+#modal.hide {
+    display: none;
+}
+
+#modal .container-modal {
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+}
+
+#modal .title-modal {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 60px;
+}
+
+#modal .title-modal h4 {
+    font-size: 1.6rem;
+    color: #FFF;
+}
+
+#modal .title-modal .closeModal {
+    font-size: 0;
+    background: url("../assets/x.svg");
+    width: 20px;
+    height: 20px;
+
+    cursor: pointer;
+}
+
+#modal form label {
+    font-size: .8rem;
+    color: #FFF;
+}
+
+#modal form div {
+    display: flex;
+}
+
+#modal form div input {
+    height: 50px;
+    width: 80%;
+
+    border: 0;
+    border-radius: 5px 0 0 5px;
+
+    outline: none;
+
+    padding: 10px;
+
+    font-size: 1rem;
+}
+
+#modal form div button {
+    flex: 1;
+
+    background: url("../assets/search.svg") no-repeat center;
+
+    background-color: var(--primary-color);
+
+    border: 0;
+    border-radius: 0 5px 5px 0;
+
+    font-size: 0;
+
+    cursor: pointer;
+}
