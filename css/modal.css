@@ -11,7 +11,7 @@
     justify-content: center;
     align-items: center;
 
-    transition: 400ms;
+    transition: 4000ms;
 }
 
 #modal.hide {
@@ -36,7 +36,7 @@
     color: #FFF;
 }
 
-#modal .title-modal .closeModal {
+#modal .title-modal .btnCloseSearchModal {
     font-size: 0;
     background: url("../assets/x.svg");
     width: 20px;
