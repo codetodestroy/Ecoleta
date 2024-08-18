@@ -3,11 +3,11 @@
     background: url("../assets/arrow-left.svg") no-repeat;
 }
 
-.content-form {
+#create-point-page .content-form {
     gap: 20px;
 }
 
-.container-form {
+#create-point-page .container-form {
     background-color: #FFF;
     box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
 
@@ -16,17 +16,17 @@
     border-radius: 5px;
 }
 
-.container-form h1 {
-    font-size: 1.4rem;
+#create-point-page .container-form h1 {
+    font-size: 1.2rem;
 }
 
-.container-form form {
+#create-point-page .container-form form {
     display: flex;
     flex-direction: column;
     gap: 20px;
 }
 
-.container-form legend {
+#create-point-page .container-form legend {
     font-size: 1rem;
     font-weight: 600;
     color: var(--title-color);
@@ -39,39 +39,39 @@
     justify-content: space-between;
 }
 
-.container-form form fieldset + fieldset legend::after {
+#create-point-page .container-form form fieldset+fieldset legend::after {
     content: 'Selecione um ou mais itens abaixo';
 
-    font-size: .8rem;
+    font-size: .6rem;
     font-weight: 400;
     color: #000;
 }
 
-.container-form fieldset, 
-.container-form .field-group {
+#create-point-page .container-form fieldset,
+#create-point-page .container-form .field-group {
     display: flex;
     flex-direction: column;
     gap: 20px;
 }
 
-.container-form .field {
+#create-point-page .container-form .field {
     display: flex;
     flex-direction: column;
     gap: 4px;
 }
 
-.container-form label {
+#create-point-page .container-form label {
     font-size: .8rem;
     text-transform: uppercase;
     font-weight: 400;
 }
 
-.container-form input, 
-.container-form select {
-    height: 45px;
+#create-point-page .container-form input,
+#create-point-page .container-form select {
+    height: 40px;
 
     background-color: var(--bg-color);
-    
+
     border-radius: 5px;
     border: 0;
     outline: none;
@@ -81,34 +81,34 @@
     font-size: 0.8rem;
 }
 
-.container-form input:focus,
-.container-form select:focus {
+#create-point-page .container-form input:focus,
+#create-point-page .container-form select:focus {
     border: 2px solid var(--primary-color);
 }
 
-.items {
+#create-point-page .items {
     display: grid;
     grid-template-columns: 1fr 1fr;
     gap: 10px;
 }
 
-.item {
+#create-point-page .item {
     background-color: var(--bg-color);
 
     height: 150px;
 
     padding: 20px;
     text-align: center;
-    
+
     border-radius: 5px;
 }
 
-.item h4 {
+#create-point-page .item h4 {
     margin-top: 15px;
     font-size: .8rem;
 }
 
-#btnCreatePoint {
+#create-point-page #btnCreatePoint {
     margin-top: 20px;
     width: 100%;
     height: 70px;
@@ -125,6 +125,84 @@
     transition: background-color 0.4s;
 }
 
-#btnCreatePoint:hover {
+#create-point-page #btnCreatePoint:hover {
     background-color: var(--dark-primary-color);
 }
+
+@media (width >=768px) {
+    /* HEADER */
+    #create-point-page .content-form {
+        gap: 30px;
+    }
+
+    #create-point-page .container-form {
+        max-width: 750px;
+        margin: 0 auto;
+
+        padding: 60px 50px;
+    }
+
+    #create-point-page .container-form h1 {
+        font-size: 2.2rem;
+    }
+
+    #create-point-page .container-form form {
+        gap: 60px;
+    }
+
+    #create-point-page .container-form legend {
+        font-size: 1.4rem;
+        margin-bottom: 30px;
+    }
+
+    #create-point-page .container-form form fieldset+fieldset legend::after {
+        font-size: 1rem;
+    }
+
+    #create-point-page .container-form .field-group {
+        flex-direction: row;
+        gap: 40px;
+    }
+
+    #create-point-page .container-form .field {
+        width: 50%;
+        gap: 8px;
+    }
+
+    #create-point-page .container-form label {
+        font-size: 1rem;
+    }
+
+    #create-point-page .container-form input,
+    #create-point-page .container-form select {
+        height: 55px;
+
+        padding: 8px 16px;
+
+        font-size: 1rem;
+    }
+
+    #create-point-page .items {
+        grid-template-columns: 1fr 1fr 1fr;
+        gap: 20px;
+    }
+
+    #create-point-page .item {
+        padding: 30px;
+    }
+
+    #create-point-page .item h4 {
+        margin-top: 15px;
+    }
+
+    #create-point-page #btnCreatePoint {
+        width: 300px;
+        margin: 0 auto;
+    }
+}
+
+@media (width >=1199px) {}
+
+@media (width >=1500px) {}
+
+@media (height <=780px) {}
