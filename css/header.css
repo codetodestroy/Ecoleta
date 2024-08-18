@@ -17,6 +17,7 @@
 
     position: absolute;
     bottom: -80px;
+    padding-bottom: 20px;
 }
 
 .content header a::before {
@@ -37,5 +38,6 @@
 
     .content header a {
         position: static;
+        padding-bottom: 0px;
     }
 }
