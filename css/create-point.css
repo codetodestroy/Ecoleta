@@ -31,17 +31,20 @@
     font-weight: 600;
     color: var(--title-color);
     margin-bottom: 15px;
+
+    width: 100%;
+
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
 }
 
-.container-form legend::after {
-    content: '';
+.container-form form fieldset + fieldset legend::after {
+    content: 'Selecione um ou mais itens abaixo';
 
-    display: block;
-
-    width: 20px;
-    height: 2px;
-
-    background-color: var(--primary-color);
+    font-size: 0.8rem;
+    font-weight: 400;
+    color: #000;
 }
 
 .container-form fieldset, 
