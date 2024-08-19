@@ -14,6 +14,8 @@
     padding: 25px 20px;
 
     border-radius: 5px;
+
+    margin-bottom: 40px;
 }
 
 #create-point-page .container-form h1 {
@@ -133,7 +135,7 @@
 }
 
 .items .selectedItem {
-    background-color: #919191 !important;
+    background-color: #dadada !important;
     border-color: var(--primary-color) !important;
 }
 
@@ -150,7 +152,7 @@
 
     #create-point-page .container-form {
         max-width: 750px;
-        margin: 0 auto;
+        margin: 0 auto 40px;
 
         padding: 60px 50px;
     }

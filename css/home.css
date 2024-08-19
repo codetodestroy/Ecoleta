@@ -64,9 +64,7 @@
 
 @media (width >= 768px) {
     #home-page {
-        height: 100vh;
-        
-        background: url("../assets/home-background.svg") no-repeat 300px bottom;
+        background: url("../assets/home-background.svg") no-repeat 400px bottom;
     }
 
     /* MAIN  */
