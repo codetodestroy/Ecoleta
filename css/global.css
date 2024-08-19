@@ -13,6 +13,10 @@ body {
     background-color: var(--bg-color);
 }
 
+body.toHideScrol {
+    overflow: hidden;
+}
+
 a {
     text-decoration: none;
 }

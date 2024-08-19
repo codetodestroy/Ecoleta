@@ -48,3 +48,36 @@ const allItems = document.querySelectorAll('.item');
 allItems.forEach((item) => {
     item.addEventListener('click', selectedItem);
 });
+
+function isCreatePointBlank(e) {
+    const eName = document.querySelector('#eName');
+    const eAddress = document.querySelector('#eAddress');
+    const eAddressComplement = document.querySelector('#eAddressComplement');
+
+    const state = document.querySelector('#eState');
+    const city = document.querySelector('#eCity');
+
+    if(eName.value == '') {
+        alert('Por favor, digite o nome da entidade!');
+        eName.focus();
+        e.preventDefault();
+    } else if(eAddress.value == '') {
+        alert('Por favor, digite o endereço da entidade!');
+        eAddress.focus();
+        e.preventDefault();
+    } else if(eAddressComplement.value == '') {
+        alert('Por favor, digite o complemento da entidade!');
+        eAddressComplement.focus();
+        e.preventDefault();
+    } else if(state.value === 'none') {
+        alert('Por favor, selecione um estado!');
+        state.focus();
+        e.preventDefault();
+    } else if(city.value === 'none')  {
+        alert('Por favor, selecione uma cidade!');
+        city.focus();
+        e.preventDefault();
+    }
+}
+const btnCreatePoint = document.querySelector('#btnCreatePoint');
+btnCreatePoint.addEventListener('click', isCreatePointBlank);
