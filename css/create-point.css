@@ -101,6 +101,7 @@
     text-align: center;
 
     border-radius: 5px;
+    border: 2px solid var(--bg-color);
 
     cursor: pointer;
 }
@@ -131,8 +132,9 @@
     background-color: var(--dark-primary-color);
 }
 
-.items .item.selectedItem {
-    border: 2px solid var(--primary-color);
+.items .selectedItem {
+    background-color: #919191 !important;
+    border-color: var(--primary-color) !important;
 }
 
 .items .item img,
@@ -140,7 +142,7 @@
     pointer-events: none;
 }
 
-@media (width >=768px) {
+@media (width >= 768px) {
     /* HEADER */
     #create-point-page .content-form {
         gap: 30px;

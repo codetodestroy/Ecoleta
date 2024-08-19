@@ -33,14 +33,42 @@ function showCitiesListBasedOnState(e) {
         }
     });
 }
-
 sltStates.addEventListener('change', showCitiesListBasedOnState);
 
 // Itens de coleta
+const itemsToCollect = document.querySelectorAll('.items .item');
+
+itemsToCollect.forEach((itemColect) => {
+    itemColect.addEventListener('click', selectedItem);
+});
+
+const collectedItems = document.querySelector('input[name=items]');
+
+let selectedItems = [];
+
 function selectedItem(e) {
     const item = e.target;
 
     item.classList.toggle('selectedItem');
+
+    let itemId = item.dataset.id;
+
+    const alreadySelected = selectedItems.findIndex((item) => {
+        return itemFound = item == itemId; 
+    });
+
+    if(alreadySelected >= 0) {
+        const filteredItems = selectedItems.filter((item) => {
+            const isItemDifferent = item != itemId;
+            return isItemDifferent;
+        });
+
+        selectedItems = filteredItems;
+    } else {
+        selectedItems.push(itemId);
+    }
+
+    collectedItems.value = selectedItems
 }
 
 const allItems = document.querySelectorAll('.item');
