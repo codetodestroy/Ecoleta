@@ -1,14 +1,13 @@
 // Fectch API na API do IBGE para pegar Estados e Cidades
 const sltStates = document.querySelector('#eState');
 
-function showStatesList() {
-    const urlStates = 'https://servicodados.ibge.gov.br/api/v1/localidades/estados';
+async function showStatesList() {
+    const statesIBGE = await fetch('https://servicodados.ibge.gov.br/api/v1/localidades/estados');
+    const states = await statesIBGE.json();
 
-    fetch(urlStates).then(res => res.json()).then(states => {
-        for(let state of states) {  
-            sltStates.innerHTML += `<option value="${state.id}">${state.nome}</option>`;
-        }
-    });
+    for (let state of states) {
+        sltStates.innerHTML += `<option value="${state.id}">${state.nome}</option>`;
+    }
 }
 showStatesList();
 
@@ -19,16 +18,16 @@ function showCitiesListBasedOnState(e) {
 
     const urlCities = `https://servicodados.ibge.gov.br/api/v1/localidades/estados/${nState}/municipios`;
 
-    if(nState === 'none') {
+    if (nState === 'none') {
         sltCities.disabled = true;
     } else {
         sltCities.disabled = false;
     }
-    
+
     sltCities.innerHTML = '<option value="none">Selecione a Cidade...</option>';
-    
+
     fetch(urlCities).then(res => res.json()).then(cities => {
-        for(let city of cities) {
+        for (let city of cities) {
             sltCities.innerHTML += `<option value="${city.id}">${city.nome}</option>`;
         }
     });
@@ -54,10 +53,10 @@ function selectedItem(e) {
     let itemId = item.dataset.id;
 
     const alreadySelected = selectedItems.findIndex((item) => {
-        return itemFound = item == itemId; 
+        return itemFound = item == itemId;
     });
 
-    if(alreadySelected >= 0) {
+    if (alreadySelected >= 0) {
         const filteredItems = selectedItems.filter((item) => {
             const isItemDifferent = item != itemId;
             return isItemDifferent;
@@ -85,23 +84,23 @@ function isCreatePointBlank(e) {
     const state = document.querySelector('#eState');
     const city = document.querySelector('#eCity');
 
-    if(eName.value == '') {
+    if (eName.value == '') {
         alert('Por favor, digite o nome da entidade!');
         eName.focus();
         e.preventDefault();
-    } else if(eAddress.value == '') {
+    } else if (eAddress.value == '') {
         alert('Por favor, digite o endereço da entidade!');
         eAddress.focus();
         e.preventDefault();
-    } else if(eAddressComplement.value == '') {
+    } else if (eAddressComplement.value == '') {
         alert('Por favor, digite o complemento da entidade!');
         eAddressComplement.focus();
         e.preventDefault();
-    } else if(state.value === 'none') {
+    } else if (state.value === 'none') {
         alert('Por favor, selecione um estado!');
         state.focus();
         e.preventDefault();
-    } else if(city.value === 'none')  {
+    } else if (city.value === 'none') {
         alert('Por favor, selecione uma cidade!');
         city.focus();
         e.preventDefault();
