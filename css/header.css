@@ -23,6 +23,12 @@
     height: 20px;
 }
 
+/* HEADER */
+#search-page header a::before, 
+#create-point-page header a::before {
+    background: url("../assets/arrow-left.svg") no-repeat;
+}
+
 @media (width >= 768px) {
     /* HEADER */
     .content header {

@@ -1,0 +1,16 @@
+#search-page-bg {
+    background-color: #FFF;
+}
+
+#search-page {
+    background: var(--bg-color) no-repeat bottom left;
+    height: 30vh;
+}
+
+#search-page .content-form {
+    gap: 20px;
+}
+
+/* #search-page .search-container {
+
+} */
