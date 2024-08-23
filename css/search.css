@@ -12,7 +12,7 @@
 }
 
 #search-page .search-container {
-    margin: 20px 0 20px;
+    margin: 20px 0 40px;
     max-width: 960px;
 
     display: flex;
@@ -43,7 +43,7 @@
 #search-page .search-card img {
     border-radius: 5px;
     height: 160px;
-    width: 400px;
+    width: 100%;
 }
 
 #search-page .search-card h1 {
@@ -59,7 +59,7 @@
     line-height: 1.5;
 }
 
-@media (width >= 768px) {    
+@media (width >= 600px) {    
     #search-page .search-container {
         margin-left: auto;
         margin-right: auto;
@@ -70,8 +70,12 @@
     }
 }
 
-@media (width >= 1000px) {    
+@media (width >= 768px ) {    
     #search-page .search-cards {
         grid-template-columns: 1fr 1fr 1fr;
+    }
+
+    #search-page .search-length {
+        align-self: flex-start;
     }
 }
