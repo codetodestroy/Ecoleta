@@ -11,12 +11,13 @@ async function showStatesList() {
 }
 showStatesList();
 
-function showCitiesListBasedOnState(e) {
+async function showCitiesListBasedOnState(e) {
     const sltCities = document.querySelector('#eCity');
 
     const nState = e.target.value;
 
-    const urlCities = `https://servicodados.ibge.gov.br/api/v1/localidades/estados/${nState}/municipios`;
+    const urlCities = await fetch(`https://servicodados.ibge.gov.br/api/v1/localidades/estados/${nState}/municipios`);
+    const cities = await urlCities.json();
 
     if (nState === 'none') {
         sltCities.disabled = true;
@@ -26,11 +27,9 @@ function showCitiesListBasedOnState(e) {
 
     sltCities.innerHTML = '<option value="none">Selecione a Cidade...</option>';
 
-    fetch(urlCities).then(res => res.json()).then(cities => {
-        for (let city of cities) {
-            sltCities.innerHTML += `<option value="${city.id}">${city.nome}</option>`;
-        }
-    });
+    for (let city of cities) {
+        sltCities.innerHTML += `<option value="${city.id}">${city.nome}</option>`;
+    }
 }
 sltStates.addEventListener('change', showCitiesListBasedOnState);
 
